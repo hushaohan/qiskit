@@ -25,6 +25,7 @@ The following `quantum algorithms <#quantum-algorithms>`__ are part of Aqua:
 -  :ref:`Simon`
 -  :ref:`Support Vector Machine Quantum Kernel (QSVM Kernel)`
 -  :ref:`Support Vector Machine Variational (QSVM Variational)`
+-  :ref:`Quantum Neural Network (QNN)`
 -  :ref:`HHL algorithm for solving linear systems (HHL)`
 -  :ref:`Shor's Factoring Algorithm`
 
@@ -730,6 +731,31 @@ QSVM Variational can be configured with the following parameters:
 .. topic:: Problems Supported
 
    In Aqua, QSVM Variational  supports the ``svm_classification`` problem.
+.. _qnn:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Quantum Neural Network (QNN)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Also geared towards classification tasks,
+Aqua's Quantum Neural Network, or QNN, is identical to QSVM-Variational
+except for one important difference:
+Rather than relying on a feature map to encode data points,
+which requires the same number of qubits as the input data dimension,
+QNN directly uses quantum state vector to encode input data,
+which leads to a reduction from linear to logarithmic for the number of qubits.
+QNN can be configured in the same way as QSVM-Variational
+except that a feature map is omitted.
+
+.. topic:: Declarative Name
+
+   When referring to Quantum Neural Network declaratively inside Aqua, its code ``name``, by which
+   Aqua dynamically discovers and loads it, is ``QNN``.
+
+.. topic:: Problems Supported
+
+   In Aqua, QNN supports the ``svm_classification`` problem.
+
 
 .. _hhl:
 
