@@ -24,7 +24,7 @@ The following `quantum algorithms <#quantum-algorithms>`__ are part of Aqua:
 -  :ref:`Bernstein Vazirani`
 -  :ref:`Simon`
 -  :ref:`Support Vector Machine Quantum Kernel (QSVM Kernel)`
--  :ref:`Support Vector Machine Variational (QSVM Variational)`
+-  :ref:`Support Vector Machine Variational (QSVM-Variational)`
 -  :ref:`Quantum Neural Network (QNN)`
 -  :ref:`HHL algorithm for solving linear systems (HHL)`
 -  :ref:`Shor's Factoring Algorithm`
@@ -37,7 +37,7 @@ quantum algorithms:
 
 -  :ref:`Exact Eigensolver`
 -  :ref:`CPLEX Ising`
--  :ref:`Support Vector Machine Radial Basis Function Kernel (SVM Classical)`
+-  :ref:`Support Vector Machine Radial Basis Function Kernel (SVM-Classical)`
 
 .. topic:: Extending the Algorithm Library
 
@@ -612,7 +612,7 @@ that maps :math:`f:\{0,1\}^n \rightarrow \{0,1\}` such that
 Simon
 ^^^^^
 
-The Simon algorithm finds a hidden integer :math:`s \in \{0,1\}^n`
+The Simon's algorithm finds a hidden integer :math:`s \in \{0,1\}^n`
 from an oracle :math:`f_s` that satisfies :math:`f_s(x) = f_s(y)` if and only
 if :math:`y=x \oplus s` for all :math:`x \in \{0,1\}^n`. Thus, if
 :math:`s = 0\ldots 0`, i.e., the all-zero bitstring, then :math:`f_s` is a
@@ -629,7 +629,7 @@ Simon algorith.
 
 .. topic:: Problems Supported
 
-   In Aqua, the Simon algorithm supports the ``periodfinding`` problem.
+   In Aqua, the Simon's algorithm supports the ``periodfinding`` problem.
 
 .. _svm-q-kernel:
 
@@ -689,22 +689,22 @@ The default is ``False``.
 
 .. topic:: Problems Supported
 
-   In Aqua, QSVM Kernel  supports the ``svm_classification`` problem.
+   In Aqua, QSVM Kernel supports the ``svm_classification`` problem.
 
 .. _svm-variational:
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Support Vector Machine Variational (QSVM Variational)
+Support Vector Machine Variational (QSVM-Variational)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Just like QSVM Kernel, the QSVM Variational algorithm applies to
+Just like QSVM Kernel, the QSVM-Variational algorithm applies to
 classification problems that require a feature map for which computing
-the kernel is not efficient classically. QSVM Variational uses the variational method to solve such
+the kernel is not efficient classically. QSVM-Variational uses the variational method to solve such
 problems in a quantum processor.  Specifically, it optimizes a
 parameterized quantum circuit to provide a solution that cleanly
 separates the data.
 
-QSVM Variational can be configured with the following parameters:
+QSVM-Variational can be configured with the following parameters:
 
 -  The depth of the variational circuit to be optimized:
 
@@ -725,12 +725,14 @@ QSVM Variational can be configured with the following parameters:
 
 .. topic:: Declarative Name
 
-   When referring to QSVM Variational declaratively inside Aqua, its code ``name``, by which
+   When referring to QSVM-Variational declaratively inside Aqua, its code ``name``, by which
    Aqua dynamically discovers and loads it, is ``QSVM.Variational``.
 
 .. topic:: Problems Supported
 
-   In Aqua, QSVM Variational  supports the ``svm_classification`` problem.
+   In Aqua, QSVM-Variational supports the ``svm_classification`` problem.
+
+
 .. _qnn:
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -940,12 +942,12 @@ CPLEX Ising can be configured with the following parameters:
 .. _avm-rbf-kernel:
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Support Vector Machine Radial Basis Function Kernel (SVM Classical)
+Support Vector Machine Radial Basis Function Kernel (SVM-Classical)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-SVM Classical uses a classical approach to experiment with feature map classification
+SVM-Classical uses a classical approach to experiment with feature map classification
 problems.
-SVM Classical can be configured with a ``bool`` parameter,
+SVM-Classical can be configured with a ``bool`` parameter,
 indicating whether or not to print additional information when the algorithm is running:
 
 .. code:: python
@@ -956,9 +958,9 @@ The default value for this parameter is ``False``.
 
 .. topic:: Declarative Name
 
-   When referring to SVM Classical declaratively inside Aqua, its code ``name``, by which
+   When referring to SVM-Classical declaratively inside Aqua, its code ``name``, by which
    Aqua dynamically discovers and loads it, is ``SVM``.
 
 .. topic:: Problems Supported
 
-   In Aqua, SVM Classical supports the ``svm_classification`` problem.
+   In Aqua, SVM-Classical supports the ``svm_classification`` problem.
