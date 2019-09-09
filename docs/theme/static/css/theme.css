@@ -203,12 +203,16 @@ a.reference.external:hover{
 .document{
     min-height: calc(100vh - 230px);
     background: white;
-    max-width: 1000px !important;
+    max-width: 1200px;
     margin: 0 !important;
 }
 
 .document img{
     max-width: 100%;
+}
+
+.page-content pre {
+    white-space: pre;
 }
 
 #button-prev{
@@ -447,6 +451,10 @@ cursor: pointer;
 }
 .toctree-l5 {
     padding-left: 18px !important;
+}
+
+.languages {
+    margin: 0 0 31px 31px;
 }
 
 /* Search bar Styles */

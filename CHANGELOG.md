@@ -14,8 +14,36 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 > -   **Fixed**: for any bug fixes.
 > -   **Security**: in case of vulnerabilities.
 
-[UNRELEASED](https://github.com/Qiskit/qiskit/compare/0.11.1...HEAD)
+[UNRELEASED](https://github.com/Qiskit/qiskit/compare/0.12.0...HEAD)
 ====================================================================
+
+[0.12.0](https://github.com/Qiskit/qiskit/compare/0.11.2...0.12.0) - 2019-08-22
+===============================================================================
+
+Changed
+-------
+
+- Increased the `qiskit-aer` version to the latest release 0.3.0.
+- Increased the `qiskit-terra` version to the latest release 0.9.0.
+- Increased the `qiskit-ignis` version to the latest release 0.2.0.
+- Increased the `qiskit-aqua` version to the latest release 0.6.0.
+
+Removed
+-------
+- The `qiskit-chemistry` element has been removed from the list of installed
+  elements. This is because it has been added to the `qiskit-aqua` package
+  and no longer needs to be installed separately.
+
+
+[0.11.2](https://github.com/Qiskit/qiskit/compare/0.11.1...0.11.2) - 2019-08-20
+===============================================================================
+
+Changed
+-------
+
+- Increased the `qiskit-aqua` version to the latest release 0.5.5.
+- Increased the `qiskit-ibmq-provider` version to the latest release 0.3.2 which
+  adds a pin for the `nest_asyncio` requirement to fix an issue with python 3.5.
 
 
 [0.11.1](https://github.com/Qiskit/qiskit/compare/0.11.0...0.11.1) - 2019-07-24

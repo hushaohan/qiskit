@@ -19,16 +19,16 @@ PATH_QISKIT ?= $(shell pip show qiskit-terra | grep Location | sed 's/Location: 
 
 autodoc_qiskit:
 ifneq ($(PATH_QISKIT), )
-	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --private --module-first -d 16 \
+	sphinx-apidoc --output docs/api --separate --implicit-namespaces --private --module-first -d 16 \
 		$(PATH_QISKIT)/qiskit
 endif
 
 autodoc: autodoc_qiskit
 ifneq ($(PATH_TERRA), )
-	rm -f docs/autodoc/modules.rst
+	rm -f docs/api/modules.rst
 endif
 
-doc: autodoc
+doc:
 	make -C docs html
 	rm -rf docs/_build/html/_static/font
 	find docs/_build/html/_static/material-design-lite-1.3.0 -type f ! \

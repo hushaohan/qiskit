@@ -38,7 +38,7 @@ author = 'Qiskit Development Team'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.11.1'
+release = '0.12.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -56,7 +56,10 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'sphinx.ext.extlinks',
-    'sphinx_tabs.tabs'
+    'sphinx_tabs.tabs',
+    'sphinx_automodapi.automodapi',
+    'IPython.sphinxext.ipython_console_highlighting',
+    'IPython.sphinxext.ipython_directive'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -88,6 +91,10 @@ numfig_format = {
 # Usually you set "language" from the command line for these cases.
 language = None
 
+# For Adding Locale
+locale_dirs = ['locale/']   # path is example but recommended.
+gettext_compact = False     # optional.
+
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
@@ -117,7 +124,6 @@ extlinks = {
     'pull_ignis': ('https://github.com/Qiskit/qiskit-ignis/pull/%s', '#'),
     'pull_ibmq-provider': ('https://github.com/Qiskit/qiskit-ibmq-provider/pull/%s', '#')
 }
-
 
 # -- Options for HTML output -------------------------------------------------
 
